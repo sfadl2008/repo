@@ -11,7 +11,7 @@ pipeline {
             stage('samar') {
                 steps {
                     echo '--------------------'
-                    echo 'samar'
+                    echo 'samar*****************'
                     echo '---------------------------------'
                 }
             }
