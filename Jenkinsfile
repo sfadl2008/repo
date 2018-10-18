@@ -5,6 +5,8 @@ pipeline {
                 steps {
                     echo 'Jenkins File'
                     echo 'Jenkins File'
+                    string x
+                    def x 
                     x = new java.util.Date()
                     println x
                 }
