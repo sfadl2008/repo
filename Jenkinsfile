@@ -7,7 +7,7 @@ node {
                         sleep 60
 
                         stage "Second Echo"
-                        Echo "What time it is now ??"
+                        echo "What time it is now ??"
 
                 }
 }
