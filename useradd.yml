@@ -1,0 +1,30 @@
+---
+ - name: add some users to Machine
+   hosts: all
+   gather_facts: False
+   remote_user: ansible
+   become: yes
+   become_user: root
+   become_method: sudo
+
+   vars:
+      group: "self"
+
+   tasks:
+           - name: add group
+             group:
+               name: "{{ group }}"
+               state: present
+
+           - name: add users
+             user:
+               name: "{{ item }}"
+               state: present
+               groups: "{{ group }}"
+             loop:
+                     - samar
+                     - samar1
+                     - samar2
+
+
+...
